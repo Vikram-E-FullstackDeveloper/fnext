@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vikram's Portfolio</title>
+
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-flex">
+      <div class="branding">
+        <h1>Vikram <span>.E</span></h1>
+        <div class="social-icons">
+          <a href="https://github.com/account" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/vikram-elango-s-2559aa2a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><button onclick="openModal('aboutModal')">About</button></li>
+          <li><button onclick="openModal('projectsModal')">Projects</button></li>
+          <li><button onclick="openModal('certsModal')">Certificates</button></li>
+          <li><button onclick="openModal('contactModal')">Contact</button></li>
+          <li><a href="assets/resume.pdf" download>📄 Resume</a></li>
+          <li><button id="toggle-theme">🌓</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" data-aos="zoom-in">
+    <div class="container hero-container">
+      <img src="assets/profile.jpg" alt="Profile" class="profile-img" />
+      <div>
+        <h2>Hello, I'm <span>Vikram</span></h2>
+        <p>Creative Developer | AI Enthusiast | Smart Solution Builder</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content" data-aos="fade-up">
+      <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+      <h2>About Me</h2>
+      <p> I am an skilled FullStack developer with proficiency in Java and MERN Stack, combining 
+technical expertise with strong communication and planning abilities. I am also blend of 
+programming knowledge and interpersonal skills allows with effectively collaborate with 
+teams and manage projects, ensuring successful outcomes in your development work and I 
+am done some projects and attended Hackthons in my field.</p>
+    </div>
+  </div>
+
+  <!-- Projects Modal -->
+  <div id="projectsModal" class="modal">
+    <div class="modal-content" data-aos="fade-up">
+      <span class="close" onclick="closeModal('projectsModal')">&times;</span>
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card" data-aos="fade-right">
+          <h3>Smart BabyCare Buddy</h3>
+          <p>AI-based assistant for Indian parents – provides baby care tips, food plans, vaccination reminders, and more.</p>
+        </div>
+        <div class="project-card" data-aos="fade-right">
+          <h3>Green Construction Estimator</h3>
+          <p>web app that suggests eco-friendly and cost-effective building materials based on input specs.</p>
+        </div>
+        <div class="project-card" data-aos="fade-right">
+          <h3>AI Portfolio Website</h3>
+          <p>Dynamic portfolio with backend contact form, modals, AOS animations, and certificate section.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificates Modal -->
+  <div id="certsModal" class="modal">
+    <div class="modal-content" data-aos="fade-up">
+      <span class="close" onclick="closeModal('certsModal')">&times;</span>
+      <h2>Certificates</h2>
+      <div class="cert-grid">
+        <img src="assets/cert1.jpg" alt="Cert 1" />
+        <img src="assets/cert2.jpg" alt="Cert 2" />
+        <img src="assets/cert3.jpg" alt="Cert 3" />
+        <img src="assets/cert4.jpg" alt="Cert 4" />
+        <img src="assets/cert5.jpg" alt="Cert 5" />
+        <img src="assets/cert6.jpg" alt="Cert 6" />
+        <img src="assets/cert7.jpg" alt="Cert 7" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content" data-aos="fade-up">
+      <span class="close" onclick="closeModal('contactModal')">&times;</span>
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+        <p id="formStatus" style="margin-top:10px; font-weight:bold;"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Vikram E. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
